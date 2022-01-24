@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-purpledark;
+}
+
+.spinner__circle {
+    @apply mx-auto my-auto border-2 rounded-full;
+}
+
+.spinner__planet {
+    @apply w-3 h-3 rounded-full relative;
+}
+
+.header__span {
+    @apply mx-0.5 inline-block;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:focus-within {
+    transform: rotateY(180deg);
+}
+
+.card__controls {
+    @apply py-1 px-2 border-2 my-2 mx-4 rounded-lg transform transition duration-100 hover:scale-110 border-white hover:bg-purplemedium focus:bg-purpledark focus:outline-none;
+}
+
+.card--front {
+    backface-visibility: hidden;
+}
+
+.card--back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.button-option {
+    @apply py-1 w-full border-b-1 border-purplemedium hover:bg-purplemedium focus:bg-purpledark focus:outline-none;
+}
